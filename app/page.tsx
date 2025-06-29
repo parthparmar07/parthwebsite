@@ -160,7 +160,7 @@ export default function Portfolio() {
       tech: ["Python", "AI/ML", "React", "Django", "NLP"],
       icon: <Brain className="h-6 w-6" />,
       gradient: "from-indigo-400 to-purple-600",
-      image: "/skillsync-platform.jpg",
+      image: "/skill sync.png",
     },
     {
       title: "Stock Market Prediction & Analysis",
@@ -169,7 +169,7 @@ export default function Portfolio() {
       tech: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
       icon: <TrendingUp className="h-6 w-6" />,
       gradient: "from-green-400 to-emerald-600",
-      image: "/stock-market-chart.jpg",
+      image: "/stock.png",
     },
     {
       title: "University Workflow Manager",
@@ -177,7 +177,7 @@ export default function Portfolio() {
       tech: ["Django", "Python", "PostgreSQL", "React"],
       icon: <Target className="h-6 w-6" />,
       gradient: "from-blue-400 to-cyan-600",
-      image: "/university-workflow.jpg",
+      image: "/university.png",
     },
     {
       title: "Excel File Unlocker",
@@ -185,7 +185,7 @@ export default function Portfolio() {
       tech: ["Python", "Cryptography", "Security"],
       icon: <Shield className="h-6 w-6" />,
       gradient: "from-orange-400 to-red-600",
-      image: "/excel-security.jpg",
+      image: "/excel.png",
     },
     {
       title: "Time Series Forecasting Model",
@@ -193,7 +193,7 @@ export default function Portfolio() {
       tech: ["Python", "LSTM", "TensorFlow", "Statistics"],
       icon: <Cpu className="h-6 w-6" />,
       gradient: "from-purple-400 to-pink-600",
-      image: "/time-series-forecast.jpg",
+      image: "/time series.png",
     },
     {
       title: "Green Building Adoption Rate Model",
@@ -201,7 +201,7 @@ export default function Portfolio() {
       tech: ["Python", "ML", "Environmental Data", "Visualization"],
       icon: <Globe className="h-6 w-6" />,
       gradient: "from-green-400 to-teal-600",
-      image: "/green-building.jpg",
+      image: "/green building.png",
     },
   ]
 
