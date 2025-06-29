@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import {
   Moon,
@@ -159,6 +160,7 @@ export default function Portfolio() {
       tech: ["Python", "AI/ML", "React", "Django", "NLP"],
       icon: <Brain className="h-6 w-6" />,
       gradient: "from-indigo-400 to-purple-600",
+      image: "/placeholder.jpg",
     },
     {
       title: "Stock Market Prediction & Analysis",
@@ -167,6 +169,7 @@ export default function Portfolio() {
       tech: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
       icon: <TrendingUp className="h-6 w-6" />,
       gradient: "from-green-400 to-emerald-600",
+      image: "/placeholder.jpg",
     },
     {
       title: "University Workflow Manager",
@@ -174,6 +177,7 @@ export default function Portfolio() {
       tech: ["Django", "Python", "PostgreSQL", "React"],
       icon: <Target className="h-6 w-6" />,
       gradient: "from-blue-400 to-cyan-600",
+      image: "/placeholder.jpg",
     },
     {
       title: "Excel File Unlocker",
@@ -181,6 +185,7 @@ export default function Portfolio() {
       tech: ["Python", "Cryptography", "Security"],
       icon: <Shield className="h-6 w-6" />,
       gradient: "from-orange-400 to-red-600",
+      image: "/placeholder.jpg",
     },
     {
       title: "Time Series Forecasting Model",
@@ -188,6 +193,7 @@ export default function Portfolio() {
       tech: ["Python", "LSTM", "TensorFlow", "Statistics"],
       icon: <Cpu className="h-6 w-6" />,
       gradient: "from-purple-400 to-pink-600",
+      image: "/placeholder.jpg",
     },
     {
       title: "Green Building Adoption Rate Model",
@@ -195,6 +201,7 @@ export default function Portfolio() {
       tech: ["Python", "ML", "Environmental Data", "Visualization"],
       icon: <Globe className="h-6 w-6" />,
       gradient: "from-green-400 to-teal-600",
+      image: "/placeholder.jpg",
     },
   ]
 
@@ -792,15 +799,24 @@ export default function Portfolio() {
                 >
                   <Card className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden bg-white dark:bg-gray-800">
                     <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className={`p-3 rounded-lg bg-gradient-to-r ${project.gradient} text-white shadow-lg`}>
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-4 left-4">
+                        <div className={`p-2 rounded-lg bg-gradient-to-r ${project.gradient} text-white shadow-lg`}>
                           {project.icon}
                         </div>
-                        <CardTitle className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                          {project.title}
-                        </CardTitle>
                       </div>
+                    </div>
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3">
+                        {project.title}
+                      </CardTitle>
                       <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed">
                         {project.description}
                       </CardDescription>
@@ -990,7 +1006,8 @@ export default function Portfolio() {
                   <CardContent>
                     <div className="space-y-4">
                       {[
-                        "Google: Gen AI, LLMs, Responsible AI",
+                        "Google: Gen AI, LLMs, Responsible AI, Code Vipassana S10",
+                        "IIT Roorkee: Quantum Computing",
                         "DeepLearning.ai: AI Coding Agents, Chatbots",
                         "SimpliLearn: Retrieval-Augmented Generation (RAG)",
                         "Tata Group: Data Visualization",
